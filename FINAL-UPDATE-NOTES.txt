@@ -1,0 +1,26 @@
+sinsiters FINAL UPDATE — 2026-10-12
+
+Changes:
+1. services/platformManager.js
+   - WhatsApp/Telegram accounts now store desiredState as running/stopped.
+   - Newly added accounts default to stopped.
+   - Dashboard Start persists running; Stop persists stopped.
+   - Startup restores only accounts explicitly saved as running. Older records without desiredState remain stopped.
+2. services/processManager.js
+   - Added persistent Instagram desired-run file at DATA_DIR/instagram-desired-runs.json.
+   - Instagram script + parameters are saved when started and removed from desired state on explicit Stop/removal.
+   - Startup restores only previously running Instagram scripts when their session still exists.
+3. server.js
+   - Calls Instagram process manager restore after storage/session initialization.
+4. public/css/app-theme.css
+   - Final responsive account-card alignment: icon/name/identifier left, platform/status/uptime right.
+
+Not changed:
+- integrations/whatsapp/LafangaEngine.js
+- integrations/whatsapp/package.json
+- integrations/telegram/lafanga.py
+- script implementations, account API endpoints, existing session format
+- No files deleted.
+
+Verification performed: Node syntax checks for server.js, services/platformManager.js, services/processManager.js, routes/platforms.js, and public/js/platform-cards.js; ZIP integrity test.
+Live Raven runtime/pairing test was not possible in this environment.

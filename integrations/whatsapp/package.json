@@ -1,0 +1,20 @@
+{
+  "name": "sinsiters-bot",
+  "version": "22.0.0",
+  "type": "module",
+  "main": "LafangaEngine.js",
+  "scripts": {
+    "start": "node LafangaEngine.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "github:WhiskeySockets/Baileys",
+    "@hapi/boom": "^10.0.1",
+    "pino": "^8.21.0",
+    "ffmpeg-static": "^5.2.0",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0"
+  }
+}

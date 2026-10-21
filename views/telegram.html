@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a10"><title>sinsiters • Telegram</title>
+  <link rel="stylesheet" href="/css/app-theme.css?v=20261011-neon-v43">
+</head>
+<body>
+<div class="app-bg"><div class="orb o1"></div><div class="orb o2"></div><div class="grid-bg"></div></div>
+<header class="topbar">
+  <a class="brand brand-text-only" href="/dashboard" aria-label="sinsiters Automation Center"><span class="dashboard-brand-mark"><svg class="sinsiters-logo-svg" viewBox="0 0 100 100" role="img" aria-label="sinsiters logo" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sinsitersOrbit" x1="12" y1="10" x2="86" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#52f5ff"/><stop offset=".52" stop-color="#328dff"/><stop offset="1" stop-color="#d35cff"/></linearGradient><linearGradient id="sinsitersLetter" x1="27" y1="18" x2="69" y2="82" gradientUnits="userSpaceOnUse"><stop stop-color="#f7ffff"/><stop offset=".38" stop-color="#57eaff"/><stop offset=".72" stop-color="#5481ff"/><stop offset="1" stop-color="#e879ff"/></linearGradient><filter id="sinsitersGlow"><feGaussianBlur stdDeviation="2.2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="50" cy="50" r="36" fill="#07152c" fill-opacity=".88" stroke="url(#sinsitersOrbit)" stroke-width="2.4" filter="url(#sinsitersGlow)"/><ellipse cx="50" cy="50" rx="47" ry="15" transform="rotate(-28 50 50)" fill="none" stroke="url(#sinsitersOrbit)" stroke-width="4.2" filter="url(#sinsitersGlow)"/><path d="M34 22V70H69" fill="none" stroke="url(#sinsitersLetter)" stroke-width="11" stroke-linecap="square" stroke-linejoin="bevel" filter="url(#sinsitersGlow)"/><path d="M34 49L60 70" fill="none" stroke="#d9fcff" stroke-width="2.4" opacity=".95"/><circle cx="79" cy="21" r="3" fill="#e9fbff" filter="url(#sinsitersGlow)"/></svg></span><div><strong>sinsiters</strong><small>AUTOMATION CENTER</small></div></a>
+  <div class="top-actions"><div class="server-clock"><strong id="heroClock">--:--:--</strong><small>SERVER LOCAL TIME</small></div><div class="notif-wrap"><button id="notifBtn" class="notif-btn" aria-label="Notifications"><span class="bell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></span><span id="notifBadge" class="notif-badge">0</span></button><div id="notifPanel" class="notif-panel"><div class="notif-header"><strong>NOTIFICATIONS</strong><button id="notifClear" class="notif-clear">CLEAR</button></div><div id="notifList" class="notif-list"></div></div></div><button id="logoutBtn" class="logout-btn" type="button" aria-label="Logout" title="Logout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5M15 12H3M12 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/></svg></button></div>
+</header>
+<main class="container">
+  <section class="hero hero-branding">
+    <div class="hero-copy">
+      <div class="hero-kicker">sinsiters / AUTOMATION SYSTEM</div>
+      <h1>WELCOME TO <em>sinsiters SYSTEM.</em></h1>
+      <div class="hero-tags"><span><i></i> ACCOUNTS</span><span><i></i> SCRIPTS</span><span><i></i> LIVE RESOURCES</span></div>
+    </div>
+    <div class="workflow-mark" aria-hidden="true"><svg viewBox="0 0 220 120" focusable="false"><path class="workflow-line" d="M44 60H88M132 60H176M110 28V60M110 60V92"/><rect x="12" y="42" width="32" height="36" rx="9"/><rect x="88" y="42" width="44" height="36" rx="10"/><rect x="176" y="42" width="32" height="36" rx="9"/><rect x="94" y="12" width="32" height="16" rx="6"/><rect x="94" y="92" width="32" height="16" rx="6"/><circle cx="28" cy="60" r="4"/><circle cx="110" cy="60" r="5"/><circle cx="192" cy="60" r="4"/></svg><span>WORKFLOW • CONNECT • CONTROL</span></div>
+  </section>
+  <nav class="platform-nav platform-nav-after-hero" aria-label="Platform navigation">
+    <a class="platform-nav-link" href="/instagram" aria-label="Instagram page"><span class="nav-platform-icon ig">IG</span><span>Instagram</span></a>
+    <a class="platform-nav-link" href="/whatsapp" aria-label="WhatsApp page"><span class="nav-platform-icon wa">WA</span><span>WhatsApp</span></a>
+    <a class="platform-nav-link active" href="/telegram" aria-label="Telegram page"><span class="nav-platform-icon tg">TG</span><span>Telegram</span></a>
+  </nav>
+  <section class="metrics">
+    <article><span>ACCOUNTS</span><strong id="statIds">0</strong><small>CONNECTED</small></article>
+    <article><span>RUNNING</span><strong id="statRunning">0</strong><small>ACTIVE PROCESSES</small></article>
+    <article class="resource-card"><span>CPU USAGE</span><strong id="statCpu">--%</strong><small id="statCpuMeta">CONTAINER CPU LIMIT · ACTUAL</small></article>
+    <article class="resource-card"><span>RAM USED</span><strong id="statRam">-- MB</strong><small id="statRamMeta">--% · CONTAINER RAM LIMIT</small></article>
+    <article><span>UPTIME</span><strong id="statUptime">--</strong><small>SERVICE</small></article>
+    <article class="ping-card"><span>LIVE PING</span><strong id="statPing">-- MS</strong><small id="statPingMeta">SERVER RESPONSE</small></article>
+  </section>
+  <section class="section-head platform-section-head"><div><div class="eyebrow">INDEPENDENT ENGINE</div><h2>Telegram connection</h2><p class="section-copy">This platform runs independently. Errors here do not stop Instagram or the other platform.</p></div></section><section class="cards-grid platform-grid">    <article class="account-card platform-card" id="telegramCard">
+      <div class="account-top"><div class="account-main"><div class="avatar platform-avatar tg-avatar">TG</div><div><div class="account-name">Telegram Engine</div><div class="account-handle">aiogram · Multi-bot</div></div></div><div class="status idle" id="tgStatus"><i></i>NOT CONFIGURED</div></div>
+      <div class="run-box"><div class="run-title"><span>FIRST CONNECT</span><strong id="tgUptime">--</strong></div><form id="tgConnectForm" class="platform-form"><label>Owner Telegram ID<input id="tgOwnerId" inputmode="numeric" placeholder="123456789" autocomplete="off" required></label><label>Bot Token<input id="tgToken" type="password" placeholder="123456789:token-from-BotFather" autocomplete="off" required></label><div class="section-copy">Credentials are stored server-side and never returned to the browser.</div><div class="platform-actions"><button class="primary-btn compact" type="submit" id="tgConnectBtn"><span>CONNECT TELEGRAM</span></button><button class="ghost-btn" type="button" data-platform-start="telegram">START / RESTART</button><button class="ghost-btn" type="button" data-platform-stop="telegram">STOP</button></div></form><div class="platform-note" id="tgNote" aria-live="polite">Not connected. No token is preconfigured.</div><div class="platform-error" id="tgError" hidden></div><div class="platform-logs" id="tgLogs" aria-live="polite"><div class="platform-log-line">Errors and important status only.</div></div></div>
+      <div class="account-footer"><span class="section-copy">Additional bots: use the existing Telegram bot-management commands.</span><button class="delete-account-btn" type="button" data-platform-remove="telegram">REMOVE BOT DATA</button></div>
+    </article></section>
+</main>
+<div class="toast-container" id="toastContainer"></div>
+<script src="/js/notifications.js?v=20261012-shared-metrics-v2"></script>
+<script src="/js/platforms.js?v=20261012-shared-metrics-v2"></script>
+<script src="/js/platform-page.js?v=20261012-shared-metrics-v2"></script>
+<script src="/js/system-metrics.js?v=20261012-shared-metrics-v2"></script>
+</body></html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a10"><title>SINISTERS • Control</title>
+  <link rel="stylesheet" href="/css/app-theme.css?v=20261021-sinisters-king-responsive-v41">
+</head>
+<body class="login-page">
+  <div class="ambient"><i></i><i></i><i></i></div>
+  <main class="login-shell">
+    <section class="login-card">
+      <a class="login-brand" href="/" aria-label="SINISTERS home"><span class="login-brand-mark"><svg class="sinsiters-logo-svg" viewBox="0 0 100 100" role="img" aria-label="SINISTERS logo" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sinsitersOrbit" x1="12" y1="10" x2="86" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#52f5ff"/><stop offset=".52" stop-color="#328dff"/><stop offset="1" stop-color="#d35cff"/></linearGradient><linearGradient id="sinsitersLetter" x1="27" y1="18" x2="69" y2="82" gradientUnits="userSpaceOnUse"><stop stop-color="#f7ffff"/><stop offset=".38" stop-color="#57eaff"/><stop offset=".72" stop-color="#5481ff"/><stop offset="1" stop-color="#e879ff"/></linearGradient><filter id="sinsitersGlow"><feGaussianBlur stdDeviation="2.2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="50" cy="50" r="36" fill="#07152c" fill-opacity=".88" stroke="url(#sinsitersOrbit)" stroke-width="2.4" filter="url(#sinsitersGlow)"/><ellipse cx="50" cy="50" rx="47" ry="15" transform="rotate(-28 50 50)" fill="none" stroke="url(#sinsitersOrbit)" stroke-width="4.2" filter="url(#sinsitersGlow)"/><path d="M34 22V70H69" fill="none" stroke="url(#sinsitersLetter)" stroke-width="11" stroke-linecap="square" stroke-linejoin="bevel" filter="url(#sinsitersGlow)"/><path d="M34 49L60 70" fill="none" stroke="#d9fcff" stroke-width="2.4" opacity=".95"/><circle cx="79" cy="21" r="3" fill="#e9fbff" filter="url(#sinsitersGlow)"/></svg></span><span class="login-brand-copy"><strong>SINISTERS</strong><small>AUTOMATION CENTER</small></span></a>
+      <section class="sinisters-hero" aria-label="SINISTERS crowned king banner">
+        <div class="sinisters-hero-copy"><span>THE SINISTERS NETWORK</span><strong>CONTROL · AUTOMATE · DOMINATE</strong></div>
+      </section>
+      <div class="eyebrow">Automation access node</div>
+      <div class="login-access-line"><span></span> Secure workspace entry <span></span></div>
+      
+      <div style="display:flex;gap:10px;margin:0 0 18px">
+        <button class="primary-btn" id="showLogin" type="button" style="flex:1">LOGIN</button>
+        <button class="primary-btn" id="showRegister" type="button" style="flex:1;opacity:.75">REGISTER</button>
+      </div>
+      <form id="loginForm" autocomplete="on">
+        <label>Username<input id="username" name="username" autocomplete="username" placeholder="Username" required maxlength="80"></label>
+        <label>Password<input id="password" name="password" type="password" autocomplete="current-password" placeholder="Password" required></label>
+        <button class="primary-btn" type="submit"><span>LOGIN</span></button>
+        <div id="loginError" class="form-error" role="alert"></div>
+      </form>
+      <form id="registerForm" autocomplete="on" hidden>
+        <label>Username<input id="regUsername" name="username" autocomplete="username" placeholder="Choose username" minlength="3" maxlength="32" required></label>
+        <label>Password<input id="regPassword" name="password" type="password" autocomplete="new-password" placeholder="Create password" maxlength="128" required></label>
+        <button class="primary-btn" type="submit"><span>CREATE ACCOUNT</span></button>
+        <div id="registerError" class="form-error" role="alert"></div>
+      </form>
+      <section id="adminRoster" class="admin-roster" aria-label="Admin list">
+        <h3>✦ AUTHORIZED ADMINS ✦</h3>
+        <ol><li>LAFANAGA</li><li>PREDATOR</li><li>SCAR</li><li>AYAN</li></ol>
+      </section>
+      <section class="login-platform-tools" aria-label="SINISTERS platform tools">
+        <div class="login-tools-heading"><span>CONTROL CENTER</span><h3>Platform tools</h3><p>Instagram, WhatsApp and Telegram workspaces.</p></div>
+        <div class="login-tools-grid">
+          <a class="login-tool-card" href="/instagram"><span class="tool-mark">IG</span><span><strong>INSTAGRAM</strong><small>Accounts and session workspace</small></span><b aria-hidden="true">↗</b></a>
+          <a class="login-tool-card" href="/whatsapp"><span class="tool-mark">WA</span><span><strong>WHATSAPP</strong><small>Accounts and pairing workspace</small></span><b aria-hidden="true">↗</b></a>
+          <a class="login-tool-card" href="/telegram"><span class="tool-mark">TG</span><span><strong>TELEGRAM</strong><small>Bots and account workspace</small></span><b aria-hidden="true">↗</b></a>
+        </div>
+        <p class="login-tools-note">Sign in first to access protected workspaces.</p>
+      </section>
+      <footer><span class="footer-dot"></span> Private session <i>•</i> System online</footer>
+    </section>
+    <a class="login-contact" href="https://t.me/god_enter" target="_blank" rel="noopener noreferrer" aria-label="Contact sinsiters on Telegram">
+      <span class="contact-icon" aria-hidden="true">↗</span>
+      <span class="contact-copy"><strong>Need assistance?</strong><small>Contact support on Telegram</small></span>
+      <span class="contact-handle">@god_enter</span>
+    </a>
+    <div class="login-copyright">SINISTERS AUTOMATION CENTER <span>•</span> BUILT FOR CONTROL</div>
+  </main>
+  <style>
+    form[hidden],#adminRoster[hidden]{display:none!important}
+    :root{color-scheme:dark}
+    .login-page{min-height:100svh;background:#070707;color:#f7f0dc}
+    .ambient i{background:#d6a943;opacity:.12}
+    .login-shell{width:min(100% - 28px,580px);margin:clamp(16px,4vh,42px) auto;padding:0 0 28px}
+    .login-card{position:relative;overflow:hidden;border:1px solid #b88c35;border-radius:24px;background:linear-gradient(145deg,rgba(15,15,13,.98),rgba(5,7,7,.97) 58%,rgba(39,28,10,.95));box-shadow:0 0 0 1px #e6c36a22,inset 0 1px #fff2,0 18px 70px #0009,0 0 35px #c9952920;backdrop-filter:blur(20px)}
+    .login-card:before{background:linear-gradient(90deg,transparent,#ffe8a0,#b88b31,transparent);box-shadow:0 0 18px #e5b94d80}
+    .login-brand-mark,.dashboard-brand-mark{border-color:#e5bd55;background:radial-gradient(circle at 35% 25%,#6c4b12,#15110a 68%);box-shadow:0 0 18px #d4a43750,inset 0 0 15px #f5d47720}
+    .login-brand-copy strong,.brand strong{background:linear-gradient(100deg,#fff8dc,#d8b45b 45%,#fff0b6 70%,#9d7428);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .login-brand-copy small,.brand small{color:#c9b77f}
+    .eyebrow{color:#e5c568}
+    .login-access-line span{background:linear-gradient(90deg,transparent,#c69b42)}
+    input,textarea{border:1px solid #574521;background:linear-gradient(120deg,#11120f,#1b1b17);color:#fff9e8;border-radius:11px;min-width:0;max-width:100%;box-sizing:border-box}
+    input:focus,textarea:focus{border-color:#e7c25d;box-shadow:0 0 0 3px #d8aa3b22,0 0 18px #d6a43818}
+    .primary-btn{border:1px solid #f0d57a;border-radius:12px;background:linear-gradient(105deg,#8e6518,#d8aa37 48%,#755016);color:#fff9e8;box-shadow:0 0 12px #d4a63835,inset 0 1px #fff8,0 0 24px #b78a2a20}
+    .primary-btn:hover{filter:brightness(1.15);box-shadow:0 0 20px #dfb74c66,0 0 32px #a8792530}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline-color:#f0d57a}
+    .form-error{color:#ff9a91;overflow-wrap:anywhere}
+    .footer-dot{background:#4be6a1;box-shadow:0 0 10px #4be6a1}
+    .login-contact{border-color:#604b23;background:linear-gradient(120deg,#11130f,#20190c);box-shadow:0 8px 30px #0007,inset 0 1px #ffffff0b}
+    .contact-icon{background:#4b3712;color:#ffdf85;box-shadow:inset 0 0 12px #d5a33c24}.contact-handle{color:#e8cc7c}.login-copyright{color:#a99a70}
+    .admin-roster{margin-top:22px;padding:18px;border:1px solid #b9913d;border-radius:17px;background:linear-gradient(135deg,rgba(20,18,12,.98),rgba(8,10,9,.98));box-shadow:0 0 24px #b88b3018,inset 0 1px #ffffff10;position:relative;overflow:hidden}
+    .admin-roster:before{content:"";position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,#ffe9a2,#a77b24,transparent)}
+    .admin-roster h3{margin:0 0 13px;font-size:12px;letter-spacing:2px;color:#f0d47a}
+    .admin-roster ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;font-weight:850;letter-spacing:1.1px}
+    .admin-roster li{display:flex;align-items:center;gap:10px;min-width:0;padding:13px 11px;border:1px solid #5c4922;border-radius:12px;background:linear-gradient(110deg,#1d1a10,#10120f 72%,#2a2110);text-align:left;color:#fff6d9;box-shadow:inset 0 1px #ffffff0c;overflow-wrap:anywhere}
+    .admin-roster li:before{content:"♛";display:grid;place-items:center;width:30px;height:30px;flex:none;border:1px solid #b68a31;border-radius:9px;background:linear-gradient(135deg,#6c4c12,#17140d);color:#ffe69a;font-size:16px;box-shadow:0 0 12px #c89b3a24}
+    .login-contact,.login-card,.admin-roster{width:100%;box-sizing:border-box}
+    @media(max-width:520px){.login-shell{width:calc(100% - 24px);margin:14px auto 24px}.login-card{padding:24px 17px 20px;border-radius:20px}.login-brand{gap:10px}.login-brand-mark{width:54px;height:54px}.login-brand-copy strong{font-size:clamp(22px,7vw,30px);letter-spacing:.08em}.admin-roster{padding:14px}.admin-roster ol{grid-template-columns:1fr;gap:8px}.admin-roster li{padding:11px 12px}.login-contact{gap:8px;flex-wrap:wrap}.contact-handle{margin-left:auto}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+    /* Final reference-matched black + gold login/register theme */
+    .login-page{background:radial-gradient(ellipse at 50% 0%,#4a330b 0,transparent 42%),radial-gradient(ellipse at 0% 70%,#1b160a 0,transparent 38%),linear-gradient(145deg,#050505,#0b0a07 60%,#030303);color:#fff7df}
+    .login-card{border-color:#b88c35!important;background:linear-gradient(145deg,rgba(20,17,10,.98),rgba(5,6,5,.98) 58%,rgba(39,28,10,.96))!important;box-shadow:0 0 0 1px #e6c36a22,inset 0 1px #fff2,0 18px 70px #0009,0 0 35px #c9952920!important}
+    .login-card:before{background:linear-gradient(90deg,transparent,#ffe8a0,#b88b31,transparent)!important}
+    .login-brand-mark{border-color:#e5bd55!important;background:radial-gradient(circle at 35% 25%,#6c4b12,#15110a 68%)!important;box-shadow:0 0 18px #d4a43750,inset 0 0 15px #f5d47720!important}
+    .login-brand-copy strong{background:linear-gradient(100deg,#fff8dc,#d8b45b 45%,#fff0b6 70%,#9d7428)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+    .login-brand-copy small,.login-access-line{color:#d4c394!important}.eyebrow{color:#f0d47a!important}.login-access-line span{background:linear-gradient(90deg,transparent,#c69b42)!important}
+    input,textarea{border-color:#574521!important;background:linear-gradient(120deg,#11120f,#1b1b17)!important;color:#fff9e8!important}input:focus,textarea:focus{border-color:#f0d57a!important;box-shadow:0 0 0 3px #d6a63a20,0 0 20px #b98c3a22!important}
+    .primary-btn{border-color:#f0d57a!important;background:linear-gradient(105deg,#765014,#d8aa37 48%,#755016)!important;color:#fff9e8!important;box-shadow:0 0 12px #d4a63835,inset 0 1px #fff8,0 0 25px #b78a2a20!important}
+    .admin-roster{border-color:#b9913d!important;background:linear-gradient(135deg,rgba(20,18,12,.98),rgba(8,10,9,.98))!important;box-shadow:0 0 24px #b88b3018,inset 0 1px #ffffff10!important}
+    .admin-roster h3{color:#f0d47a!important}.admin-roster li{border-color:#5c4922!important;background:linear-gradient(110deg,#1d1a10,#10120f 72%,#2a2110)!important;color:#fff6d9!important}.admin-roster li:before{border-color:#b68a31!important;background:linear-gradient(135deg,#6c4c12,#17140d)!important;color:#ffe69a!important}
+    .login-contact{border-color:#604b23!important;background:linear-gradient(120deg,#11130f,#20190c)!important}.contact-icon{background:#39280d!important;color:#f0d47a!important}.contact-handle{color:#f0d47a!important}.login-copyright{color:#a08e61!important}
+    .login-page{background-image:linear-gradient(110deg,rgba(3,3,3,.88),rgba(8,7,4,.68)),url('/images/sinisters-king-banner.png')!important;background-position:center center!important;background-size:cover!important;background-attachment:fixed!important}
+    .login-shell{width:min(100%,680px)!important;min-width:0!important}
+    .login-card{width:100%;min-width:0;padding:clamp(18px,3vw,34px)!important}
+    .login-platform-tools{margin-top:18px;padding:16px;border:1px solid #806226;border-radius:16px;background:linear-gradient(145deg,rgba(18,15,8,.97),rgba(5,5,4,.96));box-shadow:inset 0 1px #ffffff0a,0 10px 28px #0007}
+    .login-tools-heading>span{font-size:10px;font-weight:850;letter-spacing:2px;color:#d9b95d}.login-tools-heading h3{margin:5px 0;color:#fff0b6;font-size:20px}.login-tools-heading p,.login-tools-note{margin:4px 0 12px;color:#bcae89;font-size:12px;line-height:1.5}
+    .login-tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.login-tool-card{display:flex;align-items:center;gap:9px;min-width:0;padding:11px;border:1px solid #5f4a21;border-radius:12px;background:linear-gradient(120deg,#211a0c,#0c0c09 75%,#251b08);transition:transform .18s,border-color .18s}.login-tool-card:hover{transform:translateY(-2px);border-color:#e3bd56}.tool-mark{display:grid;place-items:center;flex:none;width:34px;height:34px;border:1px solid #b88c35;border-radius:9px;background:linear-gradient(135deg,#755214,#181206);color:#ffe6a0;font-size:11px;font-weight:900}.login-tool-card>span:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0}.login-tool-card strong{font-size:10px;letter-spacing:.8px;color:#fff0b8}.login-tool-card small{font-size:10px;line-height:1.35;color:#b5a67f;overflow-wrap:anywhere}.login-tool-card>b{margin-left:auto;color:#dfb64c;flex:none}.login-tools-note{margin:11px 0 0}
+    @media(max-width:620px){.login-shell{width:100%!important;margin:10px auto 20px!important}.login-card{padding:18px 14px!important;border-radius:18px}.login-platform-tools{padding:12px}.login-tools-grid{grid-template-columns:1fr}.login-tool-card{padding:12px}.admin-roster ol{grid-template-columns:1fr!important}.login-brand-copy strong{font-size:clamp(22px,7vw,32px)}.login-access-line{gap:7px;font-size:10px}.login-contact{width:100%;overflow-wrap:anywhere}}
+    @media(min-width:621px) and (max-width:900px){.login-shell{width:min(100%,650px)!important}.login-tools-grid{grid-template-columns:1fr 1fr}.login-tool-card:last-child{grid-column:1/-1}}
+
+    /* Final responsive king artwork + complete black/gold theme */
+    :root{--sin-gold:#e7bd58;--sin-gold-light:#fff0b0;--sin-black:#070706}
+    html,body{max-width:100%;overflow-x:hidden}
+    .login-page{background-color:#050504!important;background-image:linear-gradient(110deg,rgba(3,3,3,.78),rgba(8,7,4,.48)),url('/images/sinisters-king-banner.png')!important;background-position:center center!important;background-size:cover!important;background-attachment:fixed!important;color:#fff3d0}
+    .login-shell{width:min(100% - 24px,720px)!important;max-width:720px!important;margin:clamp(12px,3vh,32px) auto!important;padding:0 0 24px!important}
+    .login-card{box-sizing:border-box!important;width:100%!important;max-width:100%!important;padding:clamp(16px,3vw,30px)!important;background:linear-gradient(145deg,rgba(12,11,8,.94),rgba(4,4,4,.93) 62%,rgba(31,22,8,.92))!important;border:1px solid #b88c35!important}
+    .sinisters-hero{position:relative;display:flex;align-items:flex-end;min-height:clamp(112px,22vw,190px);margin:0 0 20px;padding:clamp(14px,3vw,24px);box-sizing:border-box;overflow:hidden;border:1px solid #9b772c;border-radius:15px;background-image:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,.06)),url('/images/sinisters-king-banner.png');background-size:cover;background-position:center 42%;box-shadow:inset 0 0 0 1px #fff1,0 10px 30px #0008}
+    .sinisters-hero-copy{display:flex;flex-direction:column;gap:7px;max-width:100%;text-shadow:0 2px 10px #000;overflow-wrap:anywhere}
+    .sinisters-hero-copy span{font-size:clamp(9px,1.5vw,12px);font-weight:900;letter-spacing:.18em;color:#f0d47a}
+    .sinisters-hero-copy strong{font-size:clamp(14px,2.7vw,22px);line-height:1.25;letter-spacing:.06em;color:#fff1bd}
+    .login-brand{max-width:100%;min-width:0;box-sizing:border-box}
+    .login-brand-copy strong{font-size:clamp(24px,5.6vw,38px)!important;overflow-wrap:anywhere}
+    .admin-roster,.login-platform-tools{box-sizing:border-box;width:100%;max-width:100%;border-color:#8b6828!important;background:linear-gradient(135deg,rgba(20,16,9,.97),rgba(5,5,4,.96) 70%,rgba(34,24,8,.96))!important}
+    .admin-roster h3,.login-tools-heading>span{color:#f0d47a!important}
+    .admin-roster ol{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+    .admin-roster li{min-width:0;overflow-wrap:anywhere;border-color:#604a22!important;background:linear-gradient(110deg,#211a0c,#100f0b 70%,#2b200b)!important;color:#fff4d4!important}
+    .login-tool-card{min-width:0;overflow-wrap:anywhere;border-color:#604a22!important;background:linear-gradient(110deg,#211a0c,#0c0c09 75%,#251b08)!important}
+    .primary-btn{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+    @media(max-width:620px){.login-page{padding:10px!important;background-attachment:scroll!important;background-position:66% center!important}.login-shell{width:100%!important;margin:8px auto 18px!important}.login-card{padding:15px 12px!important;border-radius:18px!important}.sinisters-hero{min-height:118px;margin-bottom:16px;background-position:65% center;padding:14px}.sinisters-hero-copy strong{font-size:clamp(13px,4vw,18px)}.login-tools-grid{grid-template-columns:1fr!important}.admin-roster ol{grid-template-columns:1fr!important}.login-platform-tools{padding:12px}.login-contact{width:100%;box-sizing:border-box;flex-wrap:wrap}.login-contact .contact-handle{margin-left:auto}}
+    @media(min-width:621px) and (max-width:900px){.login-shell{width:min(100% - 28px,680px)!important}.login-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.login-tool-card:last-child{grid-column:1/-1}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+  </style>
+  <script>
+    const $ = id => document.getElementById(id);
+    function mode(which) { $('loginForm').hidden=which!=='login'; $('registerForm').hidden=which!=='register'; $('adminRoster').hidden=false; $('showLogin').style.opacity=which==='login'?'1':'.75'; $('showRegister').style.opacity=which==='register'?'1':'.75'; }
+    $('showLogin').addEventListener('click',()=>mode('login'));
+    $('showRegister').addEventListener('click',()=>mode('register'));
+    $('loginForm').addEventListener('submit', async e => { e.preventDefault(); const btn=e.submitter||e.target.querySelector('button'), err=$('loginError'); err.textContent=''; btn.disabled=true; try { const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:$('username').value.trim(),password:$('password').value})}); const d=await r.json(); if(d.success) location.href=d.role==='admin'?'/admin-approvals':'/dashboard'; else err.textContent=d.error||'Invalid credentials'; } catch (_) { err.textContent='Server unavailable. Try again.'; } finally { btn.disabled=false; } });
+    $('registerForm').addEventListener('submit', async e => { e.preventDefault(); const btn=e.submitter||e.target.querySelector('button'), err=$('registerError'); err.textContent=''; btn.disabled=true; try { const r=await fetch('/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:$('regUsername').value.trim(),password:$('regPassword').value})}); const d=await r.json(); if(d.success){ $('registerForm').reset(); mode('login'); $('loginError').textContent=d.message||'Registration submitted. Await admin approval.'; } else err.textContent=d.error||'Registration failed'; } catch(_){err.textContent='Server unavailable. Try again.';} finally{btn.disabled=false;} });
+  </script>
+</body>
+</html>

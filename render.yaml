@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: sinsiters-server
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    maxShutdownDelaySeconds: 120
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: RENDER_RAM_LIMIT
+        value: "512"
+      - key: RENDER_CPU_LIMIT
+        value: "0.1"
+      - key: SELF_PING_ENABLED
+        value: "true"
+      - key: SELF_PING_INTERVAL_MS
+        value: "720000"

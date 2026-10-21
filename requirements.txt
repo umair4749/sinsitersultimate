@@ -1,0 +1,5 @@
+# Central Python dependencies for every platform engine.
+# Install at image build or, when missing, from scripts/start.sh.
+instagrapi
+aiogram
+aiohttp

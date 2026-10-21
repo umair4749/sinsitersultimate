@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a10"><title>sinsiters • Instagram</title>
+  <link rel="stylesheet" href="/css/app-theme.css?v=20261012-account-ui-final1">
+</head>
+<body>
+<div class="app-bg"><div class="orb o1"></div><div class="orb o2"></div><div class="grid-bg"></div></div>
+<header class="topbar">
+  <a class="brand brand-text-only" href="/dashboard" aria-label="sinsiters Automation Center"><span class="dashboard-brand-mark"><svg class="sinsiters-logo-svg" viewBox="0 0 100 100" role="img" aria-label="sinsiters logo" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sinsitersOrbit" x1="12" y1="10" x2="86" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#52f5ff"/><stop offset=".52" stop-color="#328dff"/><stop offset="1" stop-color="#d35cff"/></linearGradient><linearGradient id="sinsitersLetter" x1="27" y1="18" x2="69" y2="82" gradientUnits="userSpaceOnUse"><stop stop-color="#f7ffff"/><stop offset=".38" stop-color="#57eaff"/><stop offset=".72" stop-color="#5481ff"/><stop offset="1" stop-color="#e879ff"/></linearGradient><filter id="sinsitersGlow"><feGaussianBlur stdDeviation="2.2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="50" cy="50" r="36" fill="#07152c" fill-opacity=".88" stroke="url(#sinsitersOrbit)" stroke-width="2.4" filter="url(#sinsitersGlow)"/><ellipse cx="50" cy="50" rx="47" ry="15" transform="rotate(-28 50 50)" fill="none" stroke="url(#sinsitersOrbit)" stroke-width="4.2" filter="url(#sinsitersGlow)"/><path d="M34 22V70H69" fill="none" stroke="url(#sinsitersLetter)" stroke-width="11" stroke-linecap="square" stroke-linejoin="bevel" filter="url(#sinsitersGlow)"/><path d="M34 49L60 70" fill="none" stroke="#d9fcff" stroke-width="2.4" opacity=".95"/><circle cx="79" cy="21" r="3" fill="#e9fbff" filter="url(#sinsitersGlow)"/></svg></span><div><strong>sinsiters</strong><small>AUTOMATION CENTER</small></div></a>
+  <div class="top-actions"><div class="server-clock"><strong id="heroClock">--:--:--</strong><small>SERVER LOCAL TIME</small></div><div class="notif-wrap"><button id="notifBtn" class="notif-btn" aria-label="Notifications"><span class="bell-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></span><span id="notifBadge" class="notif-badge">0</span></button><div id="notifPanel" class="notif-panel"><div class="notif-header"><strong>NOTIFICATIONS</strong><button id="notifClear" class="notif-clear">CLEAR</button></div><div id="notifList" class="notif-list"></div></div></div><button id="logoutBtn" class="logout-btn" type="button" aria-label="Logout" title="Logout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5M15 12H3M12 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/></svg></button></div>
+</header>
+<main class="container">
+  <section class="hero hero-branding">
+    <div class="hero-copy">
+      <div class="hero-kicker">sinsiters / AUTOMATION SYSTEM</div>
+      <h1 id="welcomeHeading">WELCOME BACK, <em id="welcomeUsername">USER</em></h1>
+      <div class="hero-tags"><span><i></i> ACCOUNTS</span><span><i></i> SCRIPTS</span><span><i></i> LIVE RESOURCES</span></div>
+    </div>
+    <div class="workflow-mark" aria-hidden="true"><svg viewBox="0 0 220 120" focusable="false"><path class="workflow-line" d="M44 60H88M132 60H176M110 28V60M110 60V92"/><rect x="12" y="42" width="32" height="36" rx="9"/><rect x="88" y="42" width="44" height="36" rx="10"/><rect x="176" y="42" width="32" height="36" rx="9"/><rect x="94" y="12" width="32" height="16" rx="6"/><rect x="94" y="92" width="32" height="16" rx="6"/><circle cx="28" cy="60" r="4"/><circle cx="110" cy="60" r="5"/><circle cx="192" cy="60" r="4"/></svg><span>WORKFLOW • CONNECT • CONTROL</span></div>
+  </section>
+  <nav class="platform-nav platform-nav-after-hero" aria-label="Platform navigation">
+    <a class="platform-nav-link active" data-platform-link="instagram" href="/instagram" aria-label="Instagram workspace"><span class="nav-platform-icon ig">IG</span><span>Instagram</span></a>
+    <a class="platform-nav-link" data-platform-link="whatsapp" href="/whatsapp" aria-label="WhatsApp workspace"><span class="nav-platform-icon wa">WA</span><span>WhatsApp</span></a>
+    <a class="platform-nav-link" data-platform-link="telegram" href="/telegram" aria-label="Telegram workspace"><span class="nav-platform-icon tg">TG</span><span>Telegram</span></a>
+  </nav>
+<section class="metrics">
+    <article><span>ACCOUNTS</span><strong id="statIds">0</strong><small>CONNECTED</small></article>
+    <article><span>RUNNING</span><strong id="statRunning">0</strong><small>ACTIVE PROCESSES</small></article>
+    <article class="resource-card"><span>CPU USAGE</span><strong id="statCpu">--%</strong><small id="statCpuMeta">CONTAINER CPU LIMIT · ACTUAL</small></article>
+    <article class="resource-card"><span>RAM USED</span><strong id="statRam">-- MB</strong><small id="statRamMeta">--% · CONTAINER RAM LIMIT</small></article>
+    <article><span>UPTIME</span><strong id="statUptime">--</strong><small>SERVICE</small></article>
+    <article class="ping-card"><span>LIVE PING</span><strong id="statPing">-- MS</strong><small id="statPingMeta">SERVER RESPONSE</small></article>
+  </section>
+  <section class="platform-workspace" id="workspaceInstagram" data-workspace="instagram">
+    <section class="section-head" id="instagramSection"><div><div class="eyebrow">INSTAGRAM WORKSPACE</div><h2>Connected accounts</h2></div><button id="addIdBtn" class="primary-btn compact"><span>+ ADD ACCOUNT</span></button></section>
+    <section class="cards-grid" id="cardsGrid"></section>
+    <section id="emptyState" class="empty-state" hidden><div class="empty-icon">+</div><h3>No accounts yet</h3><p>Add an account to start building your workspace.</p><button class="primary-btn compact" onclick="document.getElementById('addIdBtn').click()"><span>ADD FIRST ACCOUNT</span></button></section>
+  </section>
+  <section class="platform-workspace" id="workspaceWhatsapp" data-workspace="whatsapp" hidden>
+    <section class="section-head platform-workspace-head"><div><div class="eyebrow">WHATSAPP WORKSPACE</div><h2>WhatsApp accounts</h2></div><button class="primary-btn compact" data-add-platform="whatsapp"><span>+ ADD ACCOUNT</span></button></section>
+    <p class="section-copy platform-workspace-copy">Each WhatsApp account has its own session, pairing flow, controls and logs.</p>
+    <section class="cards-grid platform-cards-grid" id="whatsappCardsGrid"></section>
+    <section class="empty-state platform-empty-state" id="whatsappEmptyState"><div class="empty-icon">+</div><h3>No WhatsApp accounts yet</h3><p>Add a number, open its card, then press Start to request a pairing code.</p><button class="primary-btn compact" data-add-platform="whatsapp"><span>ADD FIRST ACCOUNT</span></button></section>
+  </section>
+  <section class="platform-workspace" id="workspaceTelegram" data-workspace="telegram" hidden>
+    <section class="section-head platform-workspace-head"><div><div class="eyebrow">TELEGRAM WORKSPACE</div><h2>Telegram accounts</h2></div><button class="primary-btn compact" data-add-platform="telegram"><span>+ ADD ACCOUNT</span></button></section>
+    <p class="section-copy platform-workspace-copy">Each Telegram bot has its own token, owner ID, process, status and logs.</p>
+    <section class="cards-grid platform-cards-grid" id="telegramCardsGrid"></section>
+    <section class="empty-state platform-empty-state" id="telegramEmptyState"><div class="empty-icon">+</div><h3>No Telegram bots yet</h3><p>Add an Owner ID and Bot Token, open the bot card, then press Start.</p><button class="primary-btn compact" data-add-platform="telegram"><span>ADD FIRST BOT</span></button></section>
+  </section>
+</main>
+<div class="modal-overlay" id="addIdModal" hidden><div class="modal-box"><button class="modal-x" id="cancelAddId">×</button><div class="eyebrow">NEW CONNECTION</div><h2>Add account</h2><p>Give it a name and paste the session ID.</p><form id="addIdForm"><label>Display name<input id="newIdName" placeholder="e.g. sinsiters Main" required></label><label>Session ID<textarea id="newIdSession" rows="4" placeholder="Paste session ID…" required></textarea></label><div class="modal-actions"><button type="button" id="cancelAddId2" class="ghost-btn">CANCEL</button><button class="primary-btn compact" type="submit"><span>VERIFY & ADD</span></button></div></form></div></div>
+<div class="modal-overlay" id="platformAddModal" hidden><div class="modal-box platform-add-modal" role="dialog" aria-modal="true" aria-labelledby="platformAddTitle"><button class="modal-x" type="button" data-close-platform-modal aria-label="Close">×</button><div class="eyebrow">NEW PLATFORM ACCOUNT</div><h2 id="platformAddTitle">Add account</h2><p id="platformAddCopy">Create an independent platform account.</p><form id="platformAddForm" class="platform-modal-form"><label>Display name<input id="platformAddName" name="name" maxlength="48" placeholder="e.g. sinsiters Main" required></label><label id="platformPhoneField">WhatsApp phone number<input id="platformAddPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="9665XXXXXXXX"></label><label id="platformOwnerField" hidden>Owner Telegram ID<input id="platformAddOwnerId" name="ownerId" inputmode="numeric" autocomplete="off" placeholder="123456789"></label><label id="platformTokenField" hidden>Bot Token<input id="platformAddToken" name="token" type="password" autocomplete="new-password" placeholder="Token from BotFather"></label><div class="platform-error" id="platformAddError" hidden></div><div class="modal-actions"><button type="button" class="ghost-btn" data-close-platform-modal>CANCEL</button><button class="primary-btn compact" id="platformAddSubmit" type="submit">ADD ACCOUNT</button></div></form></div></div>
+<div class="toast-container" id="toastContainer"></div>
+<script src="/js/notifications.js?v=20261012-account-ui-final1"></script><script src="/js/dashboard.js?v=20261011-neon-v42"></script><script src="/js/platform-cards.js?v=20261012-account-ui-final1"></script>
+
+<script>
+(async function personalizeWelcome(){
+  const heading=document.getElementById('welcomeHeading');
+  const nameNode=document.getElementById('welcomeUsername');
+  if(!heading||!nameNode)return;
+  try{
+    const response=await fetch('/api/auth/check-auth',{cache:'no-store',credentials:'same-origin'});
+    if(!response.ok)return;
+    const data=await response.json();
+    const username=String(data.username||'').trim();
+    if(username){
+      nameNode.textContent=username;
+      heading.setAttribute('aria-label','Welcome back, '+username);
+    }
+  }catch(_){/* Keep the safe default heading if session lookup fails. */}
+})();
+</script>
+</body></html>
