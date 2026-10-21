@@ -1,0 +1,34 @@
+
+name: Extract Project ZIP
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract project files
+        run: |
+          set -e
+          ZIP_FILE="sinsitersultimate-fixed.zip"
+          test -f "$ZIP_FILE"
+          mkdir -p /tmp/project
+          unzip -q "$ZIP_FILE" -d /tmp/project
+          echo "ZIP contents:"
+          find /tmp/project -maxdepth 3 -type f | head -80
+          ROOT="$(find /tmp/project -type f -name server.js -printf '%h\n' | head -1)"
+          test -n "$ROOT"
+          cp -a "$ROOT"/. .
+          rm -f "$ZIP_FILE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Extract project files from ZIP"
+          git push
