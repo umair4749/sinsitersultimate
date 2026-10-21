@@ -5,7 +5,6 @@ services:
     plan: free
     healthCheckPath: /health
     autoDeployTrigger: commit
-    maxShutdownDelaySeconds: 120
     envVars:
       - key: NODE_ENV
         value: production
